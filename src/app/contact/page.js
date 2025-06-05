@@ -138,7 +138,7 @@ export default function Contact() {
             className="text-3xl font-bold text-purple-600 sm:text-8xl tracking-wide"
             variants={item}
           >
-            Let's <span className="block">Connect</span>
+            Lets <span className="block">Connect</span>
           </motion.h1>
           
           {[

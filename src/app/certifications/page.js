@@ -1,5 +1,6 @@
 "use client";
 
+import Image from 'next/image';
 import { motion } from "framer-motion";
 
 export default function Certifications() {
@@ -81,17 +82,19 @@ export default function Certifications() {
                 whileHover="hover"
                 viewport={{ once: true, margin: "-100px" }}
               >
-                <img
+                <Image
                   src="https://img.icons8.com/?size=128&id=0umfE6N5VaVA&format=png"
                   alt="cardIcon"
                   className="size-8"
+                  width={500} height={300}
                 />
                 <h1 className="text-2xl font-bold text-purple-600 sm:text-4xl">
                   Web Development
                 </h1>
-                <img
+                <Image
                   src="https://cdn.pixabay.com/photo/2017/09/18/05/23/certificate-2760735_1280.png"
                   alt="certiImg"
+                  width={500} height={300}
                 />
                 <p className="text-justify text-sm text-gray-600 sm:text-lg">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.

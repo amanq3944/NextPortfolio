@@ -80,7 +80,7 @@ export default function Footer() {
             >
               Le
             </motion.div>
-            t's work <span className="block">together</span>
+            ts work <span className="block">together</span>
           </h1>
           
           <div className="sm:flex sm:flex-col sm:items-start sm:justify-around sm:space-x-3">
