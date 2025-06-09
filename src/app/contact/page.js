@@ -241,7 +241,7 @@ export default function Contact() {
             <motion.button
               type="submit"
               disabled={loading}
-              className="group h-11 w-48 rounded-[7px] border-2 border-purple-600 text-sm font-semibold text-purple-600 hover:cursor-pointer hover:border-none hover:bg-purple-600 hover:text-white hover:outline-none sm:h-12 sm:w-80 sm:text-lg disabled:opacity-50"
+              className="group h-11 w-full rounded-[7px] border-2 border-purple-600 text-sm font-semibold text-purple-600 hover:cursor-pointer hover:border-none hover:bg-purple-600 hover:text-white hover:outline-none sm:h-12 sm:w-80 sm:text-lg disabled:opacity-50"
               variants={formItem}
               whileHover={!loading ? buttonHover : {}}
               whileTap={!loading ? { scale: 0.95 } : {}}

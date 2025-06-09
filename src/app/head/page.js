@@ -93,8 +93,8 @@ export default function HeadSection() {
           transition={{ delay: 0.6, duration: 0.6 }}
         >
           <motion.div
-            whileHover={{ rotate: 0, scale: 1.02 }}
-            initial={{ rotate: 5 }}
+            whileHover={{ rotate: 0, scale: 1.05 }}
+            initial={{ rotate: 0 }}
             className="rounded-2xl transition-transform duration-800 shadow-2xl border-2 border-purple-600 hover:shadow-purple-600"
           >
             <Image
@@ -102,7 +102,7 @@ export default function HeadSection() {
               alt="imgHead"
               width={500}
               height={500}
-              className="sm:size-[450px] rounded-2xl  w-full h-full"
+              className="sm:size-[450px] rounded-2xl w-full h-full"
             />
           </motion.div>
         </motion.div>

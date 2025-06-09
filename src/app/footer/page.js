@@ -152,37 +152,38 @@ export default function Footer() {
           </div>
         </motion.div>
 
-        {/* Right Section - Phone */}
-        <motion.div 
-          className="rounded-[7px] border-[0.1px] p-7 group hover:border-amber-600 hover:cursor-pointer"
-          variants={item}
-          whileHover={hoverEffect}
-          whileTap={tapEffect}
-        >
-          <div className="h-36 w-full flex flex-col flex-wrap justify-around items-center">
-            <div>
-              <p className="text-xl font-bold sm:text-2xl group-hover:text-amber-600">
-                Want a more in-depth look at my history?
-              </p>
-            </div>
-            <a href="#">
-              <motion.div 
-                className="flex flex-wrap items-center justify-start sm:flex sm:flex-row sm:items-center sm:justify-start"
-                whileHover="hover"
-              >
-                <p className="flex flex-wrap text-xl text-yellow-600 sm:text-2xl group-hover:text-purple-600">
-                  +91 9575932050
-                </p>
-                <motion.img
-                  src="https://cdn-icons-png.flaticon.com/128/14035/14035529.png"
-                  alt="footerIconImg"
-                  className="size-9 rotate-45"
-                  variants={arrowIcon}
-                />
-              </motion.div>
-            </a>
-          </div>
-        </motion.div>
+        {/* Right Section - Phone (Updated to match Email section) */}
+<motion.div 
+  className="group rounded-[7px] border p-7 hover:border-amber-600 hover:cursor-pointer"
+  variants={item}
+  whileHover={hoverEffect}
+  whileTap={tapEffect}
+>
+  <div className="h-36 w-full flex flex-col flex-wrap justify-around items-center">
+    <div>
+      <p className="text-xl font-bold sm:text-2xl group-hover:text-amber-600">
+        Want a more in-depth look at my history?
+      </p>
+    </div>
+    <a href="#">
+      <motion.div 
+        className="group flex flex-wrap items-center justify-start sm:flex sm:flex-row sm:items-center sm:justify-start"
+        whileHover="hover"
+      >
+        <p className="flex flex-wrap text-xl text-yellow-600 sm:text-2xl group-hover:text-purple-600">
+          +91 9575932050
+        </p>
+        <motion.img
+          src="https://cdn-icons-png.flaticon.com/128/14035/14035529.png"
+          alt="footerIconImg"
+          className="group size-9 rotate-45"
+          variants={arrowIcon}
+        />
+      </motion.div>
+    </a>
+  </div>
+</motion.div>
+
       </motion.div>
 
       {/* Name Section */}

@@ -49,7 +49,7 @@ const AboutSection = () => {
       className="sm:h-screen h-fit bg-gradient-to-r from-purple-100 to-white sm:flex sm:flex-col sm:justify-center sm:items-center"
       id="about"
     >
-      <div className="m-20 py-10 gap-y-10 flex flex-col items-center justify-center sm:flex sm:flex-row sm:items-center sm:justify-around">
+      <div className="p-10 py-10 gap-y-10 flex flex-col items-center justify-center sm:flex sm:flex-row sm:items-center sm:justify-around">
         <motion.div
           variants={imageVariants}
           className="sm:flex sm:w-1/2 sm:flex-col sm:items-center sm:justify-center"
@@ -59,7 +59,7 @@ const AboutSection = () => {
             alt="aboutImg"
             width={500}
             height={500}
-            className="sm:size-[500px] rounded-[7px] shadow-2xl sm:shadow-2xl bg-none size-fit"
+            className="sm:size-[500px] size-80 rounded-[7px] shadow-2xl sm:shadow-2xl bg-none"
             priority // Add priority if this is above the fold
           />
         </motion.div>

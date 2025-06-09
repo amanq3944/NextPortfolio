@@ -8,15 +8,15 @@ export default function Navbar() {
         >
           <nav className="font-poppins py-3 w-full">
             <div className="w-full container flex items-center justify-around text-purple-950 sm:flex sm:items-center sm:justify-around">
-              <div className="flex items-center sm:flex">
+              <div className="flex items-center space-x-3 sm:flex">
                 <a href="#">
                   <img
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyOfIDmPDig14qxjt18ROW0HycoCgHuRLyVA&s"
                     alt="imgLogo"
-                    className="size-16 rounded-full"
+                    className="size-16 rounded-full cursor-pointer"
                   />
                 </a>
-                <span className="text-3xl font-bold font-serif">Aman</span>
+                <span className="text-3xl font-bold font-serif cursor-pointer">Aman</span>
               </div>
               <div className="hidden sm:hidden md:flex sm:flex-row sm:items-center sm:justify-center sm:gap-6">
                 <ul className="sm:flex sm:gap-6">

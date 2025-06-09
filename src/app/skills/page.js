@@ -49,38 +49,38 @@ export default function Skills() {
           }}
         >
           {[
-            {
-              title: "Design + Development",
-              desc: "Clean, modern design + optimized for performance, search engines, and conversion.",
-            },
-            {
-              title: "Technology",
-              desc: "Staying current with latest frameworks & scalable code patterns.",
-            },
-            {
-              title: "Always Responsive",
-              desc: "Mobile-first design for seamless experience across devices.",
-            },
-          ].map((item, i) => (
-            <motion.div
-              key={i}
-              className="flex items-center justify-around"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              transition={{ type: "spring" }}
-              variants={{ hidden: { opacity: 0, x: -20 }, visible: { opacity: 1, x: 0 } }}
-            >
-              <img
-                src="https://cdn-icons-png.flaticon.com/128/103/103456.png"
-                alt="skillsImg"
-                className="size-10"
-              />
-              <div className="pl-5">
-                <h1 className="text-xl font-bold sm:text-2xl">{item.title}</h1>
-                <p className="text-sm text-gray-600 sm:text-lg">{item.desc}</p>
-              </div>
-            </motion.div>
-          ))}
+  {
+    title: "Design + Development",
+    desc: "Clean, modern design + optimized for performance, search engines, and conversion.",
+  },
+  {
+    title: "Technology",
+    desc: "Staying current with latest frameworks & scalable code patterns.",
+  },
+  {
+    title: "Always Responsive",
+    desc: "Mobile-first design for seamless experience across devices.",
+  },
+].map((item, i) => (
+  <motion.div
+    key={i}
+    className="flex items-start gap-4"
+    whileHover={{ scale: 1.02 }}
+    whileTap={{ scale: 0.98 }}
+    transition={{ type: "spring" }}
+    variants={{ hidden: { opacity: 0, x: -20 }, visible: { opacity: 1, x: 0 } }}
+  >
+    <img
+      src="https://cdn-icons-png.flaticon.com/128/103/103456.png"
+      alt="skillsImg"
+      className="w-6 h-6 mt-1"
+    />
+    <div>
+      <h1 className="text-xl font-bold sm:text-2xl">{item.title}</h1>
+      <p className="text-sm text-gray-600 sm:text-lg">{item.desc}</p>
+    </div>
+  </motion.div>
+))}
         </motion.div>
 
         {/* Right Progress Bars */}
