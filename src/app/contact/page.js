@@ -257,7 +257,7 @@ export default function Contact() {
           >
             <div className="border-[0.5px] w-40 border-purple-600"></div>
             <h1 className="font-semibold tracking-wider text-purple-600">Follow me</h1>
-            <div className="flex space-x-5">
+            <div className="flex space-x-1.5">
               {[
                 "https://cdn-icons-png.flaticon.com/128/1384/1384014.png",
                 "https://cdn-icons-png.flaticon.com/128/6244/6244710.png",

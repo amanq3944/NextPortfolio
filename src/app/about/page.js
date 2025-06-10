@@ -91,7 +91,7 @@ const AboutSection = () => {
 
           <motion.p
             variants={itemVariants}
-            className="text-sm font-semibold sm:text-lg"
+            className="text-sm font-semibold sm:text-lg text-justify"
           >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
             veritatis reiciendis obcaecati excepturi maxime enim.
@@ -99,7 +99,7 @@ const AboutSection = () => {
 
           <motion.p
             variants={itemVariants}
-            className="text-sm text-slate-600 sm:text-lg"
+            className="text-sm text-slate-600 sm:text-lg text-justify"
           >
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione
             dolor iste amet id ipsam provident, quae quaerat tempore aspernatur
@@ -111,7 +111,7 @@ const AboutSection = () => {
             variants={itemVariants}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="text-sm sm:text-lg rounded-[7px] border-2 border-purple-600 font-semibold text-purple-600 hover:cursor-pointer hover:border-none hover:bg-purple-600 hover:text-white hover:outline-none sm:h-12 sm:w-80 h-10 w-50"
+            className="text-sm sm:text-lg rounded-[7px] border-2 border-purple-600 font-semibold text-purple-600 hover:cursor-pointer hover:border-none hover:bg-purple-600 hover:text-white hover:outline-none sm:h-12 sm:w-80 h-10 w-full"
           >
             Read More...
           </motion.button>

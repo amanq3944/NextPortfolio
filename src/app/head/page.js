@@ -37,7 +37,7 @@ export default function HeadSection() {
           </motion.h1>
 
           <motion.p
-            className="font-medium text-gray-600"
+            className="font-medium text-gray-600 text-justify"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
@@ -51,7 +51,7 @@ export default function HeadSection() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="text-sm sm:text-lg rounded-[7px] border-2 border-purple-600 font-semibold text-purple-600 hover:cursor-pointer hover:border-none hover:bg-purple-600 hover:text-white hover:outline-none sm:h-12 sm:w-80 h-10 w-50"
+            className="text-sm sm:text-lg rounded-[7px] border-2 border-purple-600 font-semibold text-purple-600 hover:cursor-pointer hover:border-none hover:bg-purple-600 hover:text-white hover:outline-none sm:h-12 sm:w-80 h-10 w-full"
           >
             Download CV...
           </motion.button>
@@ -87,22 +87,22 @@ export default function HeadSection() {
 
         {/* Right Image */}
         <motion.div
-          className="h-auto mt-2 w-full sm:flex sm:justify-center"
+          className="h-auto mt-2 w-72 sm:flex sm:justify-center"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.6, duration: 0.6 }}
         >
           <motion.div
-            whileHover={{ rotate: 0, scale: 1.05 }}
+            whileHover={{ rotate: 0, scale: 1 }}
             initial={{ rotate: 0 }}
-            className="rounded-2xl transition-transform duration-800 shadow-2xl border-2 border-purple-600 hover:shadow-purple-600"
+            className="rounded-2xl transition-transform duration-800 shadow-2xl border border-purple-600 hover:shadow-purple-600"
           >
             <Image
               src="/images/AMANPP.jpeg"
               alt="imgHead"
               width={500}
               height={500}
-              className="sm:size-[450px] rounded-2xl w-full h-full"
+              className="sm:size-[450px] rounded-2xl w-full h-64"
             />
           </motion.div>
         </motion.div>
