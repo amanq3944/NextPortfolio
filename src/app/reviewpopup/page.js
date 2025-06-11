@@ -60,7 +60,7 @@ const ReviewPopup = ({ onClose }) => {
         <div className="flex justify-between items-start mb-6">
           <div>
             <h2 className="text-2xl font-bold text-gray-800">Share Your Feedback</h2>
-            <p className="text-gray-600">We'd love to hear your thoughts</p>
+            <p className="text-gray-600">We would love to hear your thoughts</p>
           </div>
           <button
             onClick={onClose}
@@ -132,7 +132,7 @@ const ReviewPopup = ({ onClose }) => {
               <p className="mt-1 text-sm text-red-600">{errors.email}</p>
             )}
             <p className="mt-1 text-xs text-gray-500">
-              We'll only use this to follow up on your feedback
+              We will only use this to follow up on your feedback
             </p>
           </div>
 
