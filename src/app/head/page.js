@@ -51,7 +51,7 @@ export default function HeadSection() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3 }}
           >
-            Hello I m{" "}
+            Hello I m {" "}
             <span className="text-purple-700 font-bold relative inline-block">
               Aman Qureshi
               <span className="absolute -bottom-1 left-0 w-full h-1 bg-purple-200 rounded-full"></span>
