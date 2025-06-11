@@ -16,7 +16,7 @@ export default function Contact() {
 
   const [loading, setLoading] = useState(false);
 
-  // Enhanced animation variants
+  // Animation variants (unchanged)
   const container = {
     hidden: { opacity: 0 },
     visible: {
@@ -98,18 +98,21 @@ export default function Contact() {
     toast.loading("Sending your message...");
 
     try {
+      // Initialize EmailJS (you should do this once when your app loads)
+      emailjs.init("GjVZLX6O2ywIGcq54"); // Your public key
+
       const response = await emailjs.send(
-        "service_y9qrl47",
-        "template_0bunsva",
+        "service_ixqcxe8", // Your EmailJS service ID
+        "template_0bunsva", // Your EmailJS template ID
         {
           from_name: form.name,
           to_name: "Aman",
           from_email: form.email,
+          to_email: "amanq3944@gmail.com", // Your Gmail address
           message: form.message,
           subject: form.subject,
           phone: form.phone,
-        },
-        "GjVZLX6O2ywIGcq54"
+        }
       );
 
       if (response.status === 200) {
@@ -118,14 +121,15 @@ export default function Contact() {
         setForm({ name: "", email: "", phone: "", subject: "", message: "" });
       }
     } catch (error) {
-      console.error(error);
+      console.error("EmailJS Error:", error);
       toast.dismiss();
-      toast.error("Failed to send message!");
+      toast.error("Failed to send message. Please try again later.");
     } finally {
       setLoading(false);
     }
   };
 
+  // Rest of your component remains the same
   return (
     <motion.section
       className="relative h-full min-h-screen w-full overflow-hidden px-5 py-10 sm:px-14 sm:py-20"
