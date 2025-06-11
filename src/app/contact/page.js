@@ -170,7 +170,7 @@ export default function Contact() {
             className="text-4xl font-bold leading-tight text-purple-900 sm:text-7xl"
             variants={item}
           >
-            Let's <span className="block bg-gradient-to-r from-purple-600 to-amber-500 bg-clip-text text-transparent">Connect</span>
+            Lets <span className="block bg-gradient-to-r from-purple-600 to-amber-500 bg-clip-text text-transparent">Connect</span>
           </motion.h1>
           
           <motion.p 
@@ -237,10 +237,10 @@ export default function Contact() {
             variants={container}
           >
             {[
-              { label: "Name", type: "text", name: "name", placeholder: "Your name*" },
-              { label: "Email", type: "email", name: "email", placeholder: "Your email*" },
-              { label: "Phone", type: "text", name: "phone", placeholder: "Your number*" },
-              { label: "Subject", type: "text", name: "subject", placeholder: "Your subject*" },
+              { label: "Name*", type: "text", name: "name", placeholder: "Your name" },
+              { label: "Email*", type: "email", name: "email", placeholder: "Your email" },
+              { label: "Phone*", type: "text", name: "phone", placeholder: "Your number" },
+              { label: "Subject*", type: "text", name: "subject", placeholder: "Your subject" },
             ].map((field, i) => (
               <motion.div 
                 key={i}
@@ -274,7 +274,7 @@ export default function Contact() {
               variants={formItem}
             >
               <label htmlFor="message" className="text-sm font-medium text-purple-700 sm:text-base">
-                Message
+                Message*
               </label>
               <motion.div
                 className="relative"

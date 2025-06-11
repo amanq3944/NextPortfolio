@@ -120,7 +120,7 @@ export default function Footer() {
                 transition: { duration: 0.6 }
               }}
             >
-              Let's
+              Lets
             </motion.span>
             <motion.span className="block">create something</motion.span>
             <motion.span 
