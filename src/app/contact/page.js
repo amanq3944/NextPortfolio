@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -353,7 +354,8 @@ export default function Contact() {
                 whileHover={{ y: -4, scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
-                <img 
+                <Image
+                width={100} height={100}
                   src={social.icon} 
                   alt={social.label} 
                   className="h-5 w-5 opacity-80 transition-opacity duration-300 hover:opacity-100" 
