@@ -103,7 +103,7 @@ export default function HeadSection() {
               whileTap={{ scale: 0.97 }}
               className="px-6 py-3 border-2 border-purple-600 text-purple-600 font-medium rounded-lg hover:bg-purple-50 transition-all duration-300"
             >
-              Let's Talk
+              Lets Talk
             </motion.button>
           </motion.div>
 
