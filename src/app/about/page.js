@@ -233,15 +233,17 @@ const AboutSection = () => {
               View Portfolio
             </motion.button>
 
-            <motion.button
-              variants={buttonVariants}
-              whileHover="hover"
-              whileTap="tap"
+            <motion.a
+              href="https://flowcv.com/resume/gvu94eesbeav"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
               className="px-8 py-4 rounded-xl border-2 border-purple-600 text-purple-600 font-medium hover:bg-purple-600 hover:text-white transition-all flex items-center gap-2"
             >
               <FiDownload className="text-lg" />
               Download CV
-            </motion.button>
+            </motion.a>
           </motion.div>
         </motion.div>
       </div>

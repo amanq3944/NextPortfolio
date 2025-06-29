@@ -14,7 +14,7 @@ const certificates = [
     category: "Frontend",
     image:
       "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGRldmVsb3BlciUyMGNlcnRpZmljYXRlfGVufDB8fDB8fHww",
-    link: "https://example.com/frontend-cert",
+    link: "./certificationpage",
   },
   {
     id: 2,

@@ -134,7 +134,7 @@ export default function HeadSection() {
             transition={{ delay: 0.7 }}
           >
             <motion.a
-              href="https://drive.google.com/file/d/1yI4LHTryiR3a8nASVD7UOoMwqfVhyKLY/view?usp=sharing"
+              href="https://flowcv.com/resume/gvu94eesbeav"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.03 }}
