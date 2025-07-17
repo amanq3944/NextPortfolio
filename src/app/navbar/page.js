@@ -75,11 +75,11 @@ export default function Navbar() {
 
   return (
     <>
-      <header
+      <header id="navbar"
         className={`fixed top-0 w-full z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-white/95 backdrop-blur-lg shadow-lg py-1"
-            : "bg-white/80 backdrop-blur-md shadow-sm py-3"
+            ? "bg-gray/95 text-slate-200 backdrop-blur-lg shadow-lg py-1"
+            : "bg-gray/80 text-slate-200 backdrop-blur-md shadow-sm py-3"
         }`}
       >
         <nav className="font-poppins w-full">
@@ -132,7 +132,7 @@ export default function Navbar() {
                     {link.dropdown ? (
                       <>
                         <button
-                          className="px-3 py-2 text-gray-700 hover:text-purple-600 font-medium transition-all duration-300 flex items-center relative"
+                          className="px-3 py-2 font-bold hover:text-purple-600 transition-all duration-300 flex items-center relative"
                           onClick={() => toggleDropdown(link.id)}
                         >
                           <span className="relative z-10">{link.label}</span>
@@ -183,7 +183,7 @@ export default function Navbar() {
                     ) : (
                       <a
                         href={`#${link.id}`}
-                        className="px-3 py-2 text-gray-700 hover:text-purple-600 font-medium transition-all duration-300 relative block"
+                        className="px-3 py-2 font-bold hover:text-purple-600 transition-all duration-300 relative block"
                       >
                         <span className="relative z-10">{link.label}</span>
                         <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-purple-400 to-pink-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
@@ -202,7 +202,7 @@ export default function Navbar() {
 
               <button
                 onClick={handleHireMeClick}
-                className="relative overflow-hidden rounded-full px-6 py-2.5 font-bold text-white bg-gradient-to-r from-purple-600 to-pink-500 shadow-lg hover:shadow-xl hover:shadow-purple-200/50 transition-all duration-300 group hover:-translate-y-0.5"
+                className="relative overflow-hidden rounded px-6 py-2.5 font-bold text-white bg-gradient-to-r from-purple-600 to-pink-500 shadow-lg hover:shadow-xl hover:shadow-purple-200/50 transition-all duration-300 group hover:-translate-y-0.5"
               >
                 <span className="relative z-10 flex items-center">
                   <svg
@@ -333,7 +333,7 @@ export default function Navbar() {
               </ul>
               <button
                 onClick={handleHireMeClick}
-                className="w-full mt-4 rounded-full px-6 py-3 font-bold text-white bg-gradient-to-r from-purple-600 to-pink-500 shadow-md hover:shadow-lg hover:shadow-purple-300/50 transition-all duration-300 flex items-center justify-center group"
+                className="w-full mt-4 rounded px-6 py-3 font-bold text-white bg-gradient-to-r from-purple-600 to-pink-500 shadow-md hover:shadow-lg hover:shadow-purple-300/50 transition-all duration-300 flex items-center justify-center group"
               >
                 <svg
                   className="w-4 h-4 mr-2 group-hover:animate-bounce"

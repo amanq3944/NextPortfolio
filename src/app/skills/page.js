@@ -43,7 +43,7 @@ export default function Skills() {
   ];
 
   return (
-    <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800" id="skills">
+    <section className="bg-[url('/images/bg5.avif')] bg-cover bg-no-repeat bg-center sm:bg-fixed min-h-screen relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800" id="skills">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-full h-full opacity-10">
         <div className="absolute top-20 left-10 w-40 h-40 bg-purple-500 rounded-full filter blur-3xl mix-blend-multiply"></div>
@@ -62,7 +62,7 @@ export default function Skills() {
           <div className="inline-flex items-center justify-center space-x-4 mb-6">
             <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-transparent via-purple-600 to-transparent"></div>
             <h1 className="text-4xl sm:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">
-              My Skills
+              My <span className="uppercase underline">Skills</span> 
             </h1>
             <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-transparent via-purple-600 to-transparent"></div>
           </div>
@@ -99,7 +99,7 @@ export default function Skills() {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                className="p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700"
+                className="p-6 rounded-2xl hover:shadow-xl transition-all duration-300 shadow-2xl shadow-black"
                 variants={{
                   hidden: { opacity: 0, y: 30 },
                   visible: { 
@@ -132,7 +132,7 @@ export default function Skills() {
 
           {/* Skills Progress */}
           <motion.div
-            className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700"
+            className="bg-[url('/images/bg6.svg')] bg-cover bg-no-repeat bg-center  min-h-screen p-8 rounded-2xl shadow-lg border border-gray-100"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -152,8 +152,8 @@ export default function Skills() {
                   viewport={{ once: true }}
                 >
                   <div className="flex justify-between items-center mb-3">
-                    <span className="font-medium text-gray-700 dark:text-gray-300">{skill.skill}</span>
-                    <span className="text-sm font-bold text-gray-500 dark:text-gray-400">{skill.percent}%</span>
+                    <span className="font-medium text-gray-900 font-semibold">{skill.skill}</span>
+                    <span className="text-sm font-bold text-gray-900">{skill.percent}%</span>
                   </div>
                   <div className="relative h-3 w-full rounded-full bg-gray-200 dark:bg-gray-700 overflow-hidden">
                     <motion.div
@@ -176,7 +176,7 @@ export default function Skills() {
 
             {/* Additional Skills */}
             <div className="mt-12">
-              <h3 className="text-lg font-semibold text-center mb-6 text-gray-700 dark:text-gray-300">
+              <h3 className="text-lg text-center mb-6 py-2 text-white bg-gray-900 rounded-full">
                 Also proficient in:
               </h3>
               <div className="flex flex-wrap justify-center gap-3">

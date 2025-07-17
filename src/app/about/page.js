@@ -3,6 +3,7 @@
 import { motion, useAnimation } from "framer-motion";
 import Image from "next/image";
 import { FiDownload, FiEye } from "react-icons/fi";
+import { Typewriter } from "react-simple-typewriter";
 
 const AboutSection = () => {
   const controls = useAnimation();
@@ -91,54 +92,15 @@ const AboutSection = () => {
       whileInView="visible"
       viewport={{ once: false, margin: "-100px" }}
       variants={containerVariants}
-      className="relative min-h-screen w-full overflow-hidden bg-gradient-to-br from-purple-50 via-white to-purple-50 flex flex-col justify-center items-center py-20 px-4 sm:px-8"
+      className="bg-[url('/images/bg2.jpg')] bg-cover bg-no-repeat bg-center sm:bg-fixed min-h-screen relative w-full overflow-hidden bg-gradient-to-br from-purple-50 via-white to-purple-50 flex flex-col justify-center items-center py-20 px-4 sm:px-20"
       id="about"
     >
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 -left-20 w-96 h-96 bg-purple-200/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/3 -right-20 w-80 h-80 bg-purple-300/10 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/3 right-1/4 w-64 h-64 bg-indigo-200/10 rounded-full blur-3xl"></div>
-      </div>
 
-      <div className="relative max-w-7xl w-full p-6 sm:p-10 flex flex-col lg:flex-row items-center justify-center gap-16">
-        {/* Image Section with elegant frame */}
-        <motion.div
-          variants={imageVariants}
-          whileHover="hover"
-          onHoverStart={handleImageHover}
-          className="w-full lg:w-1/2 flex justify-center relative group"
-        >
-          <div className="relative w-80 h-80 sm:w-96 sm:h-96 lg:w-[500px] lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
-            <Image
-              src="/images/AMANAA.webp"
-              alt="Aman Qureshi - Full Stack Developer"
-              fill
-              className="object-cover object-center transition-all duration-500 group-hover:scale-105"
-              sizes="(max-width: 768px) 100vw, 50vw"
-              priority
-            />
-            {/* Decorative frame */}
-            <div className="absolute inset-0 border-4 border-white/20 rounded-2xl pointer-events-none" />
-            <div className="absolute -inset-6 bg-gradient-to-br from-purple-100/30 to-indigo-100/30 rounded-3xl -z-10 blur-md opacity-70 group-hover:opacity-90 transition-opacity duration-300" />
-          </div>
-
-          {/* Floating badge */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1, duration: 0.6 }}
-            className="absolute -bottom-5 -right-5 bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-2 rounded-full shadow-lg font-medium text-sm flex items-center gap-2 z-10"
-          >
-            <span className="h-2 w-2 bg-green-400 rounded-full animate-pulse"></span>
-            Available for work
-          </motion.div>
-        </motion.div>
-
+      <div className="sm:pb-10 relative h-full max-w-8xl w-full p-6 sm:p-10 flex flex-col lg:flex-row items-center justify-center gap-16">
         {/* Content Section */}
         <motion.div
           variants={containerVariants}
-          className="w-full lg:w-1/2 flex flex-col gap-8"
+          className="w-full flex flex-col justify-center items-start gap-8 h-full"
         >
           <motion.div variants={itemVariants} className="flex flex-col gap-2">
             <motion.span
@@ -158,17 +120,33 @@ const AboutSection = () => {
               Aman Qureshi
             </motion.h1>
             <motion.p
-              className="text-xl font-medium text-purple-800/90 flex items-center gap-2"
-              whileHover={{ x: 3 }}
-            >
-              <span className="text-purple-500">✦</span> Full Stack Developer &
-              Digital Craftsman
-            </motion.p>
+      className="text-xl font-medium text-amber-600 flex items-center gap-2"
+      whileHover={{ x: 3 }}
+    >
+      <span className="text-amber-300">✦</span>
+      <span className="text-amber-600">
+        <Typewriter
+          words={[
+            "Frontend Developer",
+            "Backend Developer",
+            "Full Stack Developer",
+            'MERN Stack Developer',
+            'Web Developer'
+          ]}
+          loop={true}
+          cursor
+          cursorStyle="|"
+          typeSpeed={70}
+          deleteSpeed={50}
+          delaySpeed={2000}
+        />
+      </span>
+    </motion.p>
           </motion.div>
 
           <motion.div variants={itemVariants} className="space-y-5">
             <motion.p
-              className="text-lg sm:text-xl text-gray-700 leading-relaxed font-light"
+              className="text-lg text-justify sm:text-xl text-white leading-relaxed font-semibold"
               whileHover={{ x: 2 }}
             >
               I architect and build exceptional digital experiences with
@@ -177,7 +155,7 @@ const AboutSection = () => {
             </motion.p>
 
             <motion.p
-              className="text-lg sm:text-xl text-gray-600 leading-relaxed font-light"
+              className="text-lg text-justify sm:text-xl text-white leading-relaxed font-semibold"
               whileHover={{ x: 2 }}
             >
               With expertise across the entire stack, I bring ideas to life
@@ -249,7 +227,7 @@ const AboutSection = () => {
       </div>
 
       {/* Animated decorative wave */}
-      <div className="absolute bottom-0 left-0 w-full overflow-hidden -mb-1">
+      {/* <div className="absolute bottom-0 left-0 w-full overflow-hidden -mb-1">
         <svg
           viewBox="0 0 1200 120"
           preserveAspectRatio="none"
@@ -270,7 +248,7 @@ const AboutSection = () => {
             className="fill-purple-200"
           ></path>
         </svg>
-      </div>
+      </div> */}
     </motion.section>
   );
 };

@@ -228,7 +228,7 @@ export default function Footer() {
                   whileHover="hover"
                 >
                   <p className="text-xl text-amber-500 sm:text-xl group-hover:text-purple-400 transition-colors">
-                    +1 (234) 567-890
+                    +91-9575932050
                   </p>
                   <motion.span
                     className="ml-2 text-amber-500 group-hover:text-purple-400 transition-colors"
@@ -292,7 +292,7 @@ export default function Footer() {
         </div>
         
         <motion.a
-          href="#navbar"
+          href="#head"
           className="flex items-center space-x-2 text-sm sm:text-base font-medium text-slate-400 hover:text-amber-500 transition-colors"
           whileHover={{ 
             scale: 1.05,

@@ -67,7 +67,7 @@ const categories = ["All", "Frontend", "Backend", "Soft Skills"];
 
 export default function CertificatesPage() {
   return (
-    <section className="w-full px-4 py-12 md:py-20 max-w-7xl mx-auto">
+    <section className="bg-[url('/images/bg4.jpg')] bg-cover bg-no-repeat bg-center sm:bg-fixed min-h-screen w-full px-4 py-12 md:py-20 max-w-full mx-auto">
       {/* Decorative background elements */}
       <div className="absolute inset-0 overflow-hidden -z-10">
         <div className="absolute top-0 left-1/4 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
@@ -83,15 +83,15 @@ export default function CertificatesPage() {
         className="text-center mb-16"
       >
         <h1 className="text-3xl font-bold sm:text-5xl mb-4">
-          <span className="relative">
+          <span className="relative text-slate-200">
             Our
             <span className="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-purple-400 to-pink-600 rounded-full"></span>
           </span>
           <span className="ml-3 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
-            Certifications
+           Projects
           </span>
         </h1>
-        <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg">
+        <p className="text-gray-400 dark:text-gray-400 max-w-2xl mx-auto text-lg">
           Verified credentials that demonstrate our expertise and commitment to
           professional development
         </p>
@@ -108,7 +108,7 @@ export default function CertificatesPage() {
             >
               <TabsTrigger
                 value={category}
-                className="capitalize px-6 py-2 text-sm sm:text-base rounded-full border border-gray-200 dark:border-gray-700 data-[state=active]:bg-gradient-to-r data-[state=active]:from-purple-600 data-[state=active]:to-pink-600 data-[state=active]:text-white data-[state=active]:border-transparent data-[state=active]:shadow-lg data-[state=active]:shadow-purple-500/20 transition-all"
+                className="capitalize px-6 py-2 text-sm sm:text-base rounded-full border border-white text-white data-[state=active]:bg-gradient-to-r data-[state=active]:from-purple-600 data-[state=active]:to-pink-600 data-[state=active]:text-white data-[state=active]:border-transparent data-[state=active]:shadow-lg data-[state=active]:shadow-purple-500/20 transition-all"
               >
                 {category}
               </TabsTrigger>
@@ -132,7 +132,7 @@ export default function CertificatesPage() {
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                   >
-                    <Card className="rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:shadow-xl transition-shadow duration-300 group">
+                    <Card className="rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 bg-white hover:shadow-xl transition-shadow duration-300 group">
                       <div className="relative h-48 overflow-hidden">
                         <Image
                           width={300}
@@ -165,7 +165,7 @@ export default function CertificatesPage() {
                             variant="default"
                             className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white shadow-md hover:shadow-lg transition-all"
                           >
-                            View Certificate
+                            View Projects
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               className="h-4 w-4 ml-2"
@@ -197,7 +197,7 @@ export default function CertificatesPage() {
         viewport={{ once: true }}
         className="mt-20 text-center"
       >
-        <h3 className="text-xl font-semibold mb-4">
+        <h3 className="text-xl font-semibold mb-4 text-white">
           Want to see more credentials?
         </h3>
         <Button

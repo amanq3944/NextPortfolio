@@ -132,7 +132,7 @@ export default function Contact() {
   // Rest of your component remains the same
   return (
     <motion.section
-      className="relative h-full min-h-screen w-full overflow-hidden px-5 py-10 sm:px-14 sm:py-20"
+      className="bg-[url('/images/bg3.jpg')] bg-cover bg-no-repeat bg-center sm:bg-fixed min-h-screen relative h-full w-full overflow-hidden px-5 py-10 sm:px-14 sm:py-20"
       id="contact"
       initial="hidden"
       whileInView="visible"
@@ -154,10 +154,10 @@ export default function Contact() {
         },
       }} />
       
-      <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col space-y-10 sm:flex-row sm:items-center sm:justify-between sm:space-y-0 sm:space-x-10">
+      <div className="bg-gray-900 rounded px-10 py-15 relative z-10 mx-auto flex h-full max-w-8xl flex-col space-y-10 sm:flex-row sm:items-center sm:justify-between sm:space-y-0 sm:space-x-10">
         {/* Contact Details - Enhanced */}
         <motion.div 
-          className="flex flex-col space-y-6 sm:max-w-md"
+          className="flex flex-col space-y-6 sm:max-w-1/2"
           variants={container}
         >
           <motion.div variants={item}>
@@ -175,11 +175,11 @@ export default function Contact() {
             className="text-4xl font-bold leading-tight text-purple-900 sm:text-7xl"
             variants={item}
           >
-            Lets <span className="block bg-gradient-to-r from-purple-600 to-amber-500 bg-clip-text text-transparent">Connect</span>
+            <span className="bg-amber-400 px-3 py-2 rounded-2xl">Lets</span> <span className="block bg-gradient-to-r from-purple-600 to-amber-500 bg-clip-text text-white">Connect</span>
           </motion.h1>
           
           <motion.p 
-            className="text-lg text-purple-800/80"
+            className="text-lg text-slate-200 font-semibold"
             variants={item}
           >
             Have a project in mind or want to discuss opportunities? Feel free to reach out!
@@ -220,8 +220,8 @@ export default function Contact() {
                   />
                 </motion.div>
                 <div className="border-b border-purple-200/60 py-2 group-hover:border-purple-400/60">
-                  <p className="text-sm font-medium text-purple-600/80 sm:text-base">{item.label}</p>
-                  <p className="text-lg font-semibold text-purple-900 sm:text-xl">{item.value}</p>
+                  <p className="text-sm font-medium text-white sm:text-base">{item.label}</p>
+                  <p className="text-lg font-semibold text-white sm:text-xl">{item.value}</p>
                 </div>
               </motion.div>
             ))}
@@ -230,7 +230,7 @@ export default function Contact() {
 
         {/* Form Section - Enhanced */}
         <motion.div 
-          className="w-full max-w-2xl rounded-2xl bg-white/80 p-6 shadow-xl backdrop-blur-sm sm:p-8"
+          className="w-full max-w-2xl rounded-2xl bg-transparent text-white p-6 shadow-xl shadow-white backdrop-blur-sm sm:p-8"
           variants={container}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -242,19 +242,19 @@ export default function Contact() {
             variants={container}
           >
             {[
-              { label: "Name*", type: "text", name: "name", placeholder: "Your name" },
-              { label: "Email*", type: "email", name: "email", placeholder: "Your email" },
-              { label: "Phone*", type: "text", name: "phone", placeholder: "Your number" },
-              { label: "Subject*", type: "text", name: "subject", placeholder: "Your subject" },
+              { label: "Name", type: "text", name: "name", placeholder: "Your name" },
+              { label: "Email", type: "email", name: "email", placeholder: "Your email" },
+              { label: "Phone", type: "text", name: "phone", placeholder: "Your number" },
+              { label: "Subject", type: "text", name: "subject", placeholder: "Your subject" },
             ].map((field, i) => (
               <motion.div 
                 key={i}
                 className="space-y-1"
                 variants={formItem}
               >
-                <label htmlFor={field.name} className="text-sm font-medium text-purple-700 sm:text-base">
+                <label htmlFor={field.name} className="text-sm font-medium text-white sm:text-base">
                   {field.label}
-                </label>
+                </label><span className="text-red-500">*</span>
                 <motion.div
                   className="relative"
                   whileHover={{ scale: 1.01 }}
@@ -266,7 +266,7 @@ export default function Contact() {
                     placeholder={field.placeholder}
                     value={form[field.name]}
                     onChange={handleChange}
-                    className="w-full rounded-xl border border-purple-200 bg-white/80 p-3 text-purple-900 placeholder-purple-400/70 outline-none transition-all duration-300 focus:border-purple-400 focus:ring-2 focus:ring-purple-200 focus:ring-offset-2 sm:p-4"
+                    className="w-full rounded-xl border border-purple-200 bg-transparent p-3 text-white placeholder-white outline-none transition-all duration-300 focus:border-purple-400 focus:ring-2 focus:ring-purple-200 focus:ring-offset-2 sm:p-4"
                     disabled={loading}
                   />
                   <div className="absolute inset-0 -z-10 rounded-xl bg-gradient-to-br from-purple-50 to-amber-50 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
@@ -278,8 +278,8 @@ export default function Contact() {
               className="sm:col-span-2"
               variants={formItem}
             >
-              <label htmlFor="message" className="text-sm font-medium text-purple-700 sm:text-base">
-                Message*
+              <label htmlFor="message" className="text-sm font-medium text-white sm:text-base">
+                Message <span className="text-red-500">*</span>
               </label>
               <motion.div
                 className="relative"
@@ -292,7 +292,7 @@ export default function Contact() {
                   value={form.message}
                   onChange={handleChange}
                   placeholder="Your message*"
-                  className="w-full rounded-xl border border-purple-200 bg-white/80 p-3 text-purple-900 placeholder-purple-400/70 outline-none transition-all duration-300 focus:border-purple-400 focus:ring-2 focus:ring-purple-200 focus:ring-offset-2 sm:p-4"
+                  className="w-full rounded-xl border border-purple-200 bg-transparent p-3 text-white placeholder-white outline-none transition-all duration-300 focus:border-purple-400 focus:ring-2 focus:ring-purple-200 focus:ring-offset-2 sm:p-4"
                   disabled={loading}
                 />
                 <div className="absolute inset-0 -z-10 rounded-xl bg-gradient-to-br from-purple-50 to-amber-50 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
@@ -336,7 +336,7 @@ export default function Contact() {
             variants={item}
           >
             <div className="h-px w-full bg-gradient-to-r from-transparent via-purple-300 to-transparent sm:w-auto sm:flex-1"></div>
-            <h3 className="px-4 text-sm font-medium text-purple-600">Follow me</h3>
+            <h3 className="px-4 text-sm font-semibold text-purple-600">Follow me</h3>
             <div className="h-px w-full bg-gradient-to-r from-transparent via-purple-300 to-transparent sm:w-auto sm:flex-1"></div>
           </motion.div>
           
