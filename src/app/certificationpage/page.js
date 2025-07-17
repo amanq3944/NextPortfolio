@@ -72,7 +72,7 @@ export default function CertificatePage() {
   return (
     <>
       <Head>
-        <title>{certificate.recipientName}'s Certificate | Next.js Academy</title>
+        <title>{certificate.recipientName}s Certificate | Next.js Academy</title>
         <meta name="description" content={`Official certificate of completion for ${certificate.courseTitle}`} />
       </Head>
 
@@ -295,7 +295,7 @@ export default function CertificatePage() {
                       Verification
                     </motion.h3>
                     <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-6 shadow-inner">
-                      <p className="text-gray-700 mb-3">Verify this certificate's authenticity:</p>
+                      <p className="text-gray-700 mb-3">Verify this certificates authenticity:</p>
                       <a 
                         href={certificate.verificationUrl} 
                         className="text-blue-600 hover:underline break-all font-medium text-lg"

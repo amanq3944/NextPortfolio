@@ -213,9 +213,10 @@ export default function Contact() {
                   className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-purple-100 to-amber-50 p-2 shadow-sm transition-all duration-300 group-hover:rotate-6 group-hover:scale-110 group-hover:shadow-md"
                   whileHover={{ scale: 1.1 }}
                 >
-                  <img 
+                  <Image 
                     src={item.icon} 
-                    alt="icon" 
+                    alt="icon"
+                    width={200} height={100}
                     className="h-6 w-6 object-contain opacity-80"
                   />
                 </motion.div>

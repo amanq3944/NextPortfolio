@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -88,9 +89,9 @@ export default function Navbar() {
             <div className="flex items-center space-x-3 group">
               <a href="#" className="flex items-center">
                 <div className="relative">
-                  <img
+                  <Image
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyOfIDmPDig14qxjt18ROW0HycoCgHuRLyVA&s"
-                    alt="Logo"
+                    alt="Logo" width={100} height={100}
                     className={`size-12 rounded-full cursor-pointer transition-all duration-500 group-hover:rotate-12 group-hover:scale-110 ${
                       scrolled ? "scale-90" : "scale-100"
                     }`}

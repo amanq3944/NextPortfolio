@@ -229,7 +229,7 @@ export default function HeadSection() {
 
                     {/* Modal Content */}
                     <h2 className="text-2xl font-bold text-purple-600 mb-2">
-                      Let's Talk!
+                      Lets Talk!
                     </h2>
                     <p className="text-gray-600 mb-6">
                       We will get back to you within 24 hours.
