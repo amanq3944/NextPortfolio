@@ -140,9 +140,9 @@ export default function Contact() {
       variants={container}
     >
       {/* Background decorative elements */}
-      <div className="absolute -right-20 -top-20 h-96 w-96 rounded-full bg-purple-100/50 blur-3xl"></div>
+      {/* <div className="absolute -right-20 -top-20 h-96 w-96 rounded-full bg-purple-100/50 blur-3xl"></div>
       <div className="absolute -bottom-40 -left-20 h-96 w-96 rounded-full bg-amber-100/50 blur-3xl"></div>
-      
+       */}
       <Toaster position="top-center" toastOptions={{
         style: {
           background: 'rgba(255, 255, 255, 0.95)',
@@ -154,10 +154,10 @@ export default function Contact() {
         },
       }} />
       
-      <div className="bg-gray-900 rounded px-10 py-15 relative z-10 mx-auto flex h-full max-w-8xl flex-col space-y-10 sm:flex-row sm:items-center sm:justify-between sm:space-y-0 sm:space-x-10">
+      <div className="bg-gray-900 rounded py-15 relative z-10 mx-auto flex h-full max-w-full flex-col space-y-10 sm:flex-row sm:items-center sm:justify-between sm:space-y-0 sm:space-x-10">
         {/* Contact Details - Enhanced */}
         <motion.div 
-          className="flex flex-col space-y-6 sm:max-w-1/2"
+          className="flex flex-col space-y-6 sm:max-w-1/2 px-10"
           variants={container}
         >
           <motion.div variants={item}>
@@ -231,7 +231,7 @@ export default function Contact() {
 
         {/* Form Section - Enhanced */}
         <motion.div 
-          className="w-full max-w-2xl rounded-2xl bg-transparent text-white p-6 shadow-xl shadow-white backdrop-blur-sm sm:p-8"
+          className="sm:w-1/2 w-full rounded-2xl bg-transparent text-white p-6 backdrop-blur-sm sm:p-8"
           variants={container}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -239,7 +239,7 @@ export default function Contact() {
         >
           <motion.form 
             onSubmit={handleSubmit} 
-            className="grid gap-5 sm:grid-cols-2"
+            className="grid gap-5 sm:grid-cols-2 w-full"
             variants={container}
           >
             {[

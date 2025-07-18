@@ -78,7 +78,7 @@ export default function Skills() {
         </motion.div>
 
         {/* Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 place-items-center">
           {/* Features */}
           <motion.div 
             className="space-y-8"
