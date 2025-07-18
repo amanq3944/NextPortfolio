@@ -42,10 +42,10 @@ export default function HeadSection() {
   }, [charIndex, index]);
 
   const socialIcons = [
-    { icon: <FaGithub />, color: "hover:text-purple-800" },
-    { icon: <FaLinkedin />, color: "hover:text-blue-600" },
-    { icon: <FaTwitter />, color: "hover:text-sky-400" },
-    { icon: <FaInstagram />, color: "hover:text-pink-600" },
+    { icon: <FaGithub />, link:'https://github.com/amanq3944', color: "hover:text-purple-800" },
+    { icon: <FaLinkedin />, link:'https://www.linkedin.com/in/aman-qureshi-86bb15197/', color: "hover:text-blue-600" },
+    { icon: <FaTwitter />, link:'https://x.com/', color: "hover:text-sky-400" },
+    { icon: <FaInstagram />, link:'https://www.instagram.com/', color: "hover:text-pink-600" },
   ];
 
   const [isOpen, setIsOpen] = useState(false);
@@ -300,7 +300,7 @@ export default function HeadSection() {
             {socialIcons.map((social, i) => (
               <motion.a
                 key={i}
-                href="#"
+                href={social.link}
                 whileHover={{ y: -3 }}
                 whileTap={{ scale: 0.9 }}
                 className={`text-2xl text-purple-600 ${social.color} transition-colors duration-300`}

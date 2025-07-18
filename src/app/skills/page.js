@@ -184,7 +184,7 @@ export default function Skills() {
                   <motion.div
                     key={index}
                     className="px-4 py-2 bg-gray-100 dark:bg-gray-700 rounded-full text-sm font-medium text-gray-700 dark:text-gray-200"
-                    whileHover={{ scale: 1.05, backgroundColor: "rgba(168, 85, 247, 0.1)" }}
+                    whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}

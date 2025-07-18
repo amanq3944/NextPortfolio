@@ -1,11 +1,16 @@
 export default function Projects() {
+
+  const handleClick = () => {
+    window.open('https://export-import-wala.vercel.app/', '_blank');
+  };
+
   const projects = [
     {
       id: 1,
-      title: "Blog Platform",
-      description: "A modern blogging platform with rich text editing and social features.",
+      title: "Export Import Training",
+      description: "A Export Import training platform.",
       colSpan: "sm:col-span-7",
-      image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+      image: "/images/p1.png"
     },
     {
       id: 2,
@@ -76,7 +81,7 @@ export default function Projects() {
                 <p className="mb-6 text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity delay-200 duration-300">
                   {project.description}
                 </p>
-                <button className="px-6 py-3 bg-transparent border-2 border-white text-white rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-all duration-300 opacity-0 group-hover:opacity-100 transform group-hover:translate-y-0 translate-y-4 delay-300">
+                <button onClick={handleClick} className="px-6 py-3 bg-transparent border-2 border-white text-white rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-all duration-300 opacity-0 group-hover:opacity-100 transform group-hover:translate-y-0 translate-y-4 delay-300">
                   View Project
                 </button>
               </div>

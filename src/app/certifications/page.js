@@ -9,17 +9,15 @@ import Image from "next/image";
 const certificates = [
   {
     id: 1,
-    title: "Frontend Developer Certification",
-    issuer: "Coursera",
+    title: "Export Import Training Specialist",
     category: "Frontend",
     image:
       "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGRldmVsb3BlciUyMGNlcnRpZmljYXRlfGVufDB8fDB8fHww",
-    link: "./certificationpage",
+    link: "https://export-import-wala.vercel.app/",
   },
   {
     id: 2,
     title: "Backend with Node.js",
-    issuer: "Udemy",
     category: "Backend",
     image:
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmFja2VuZCUyMGNvZGV8ZW58MHx8MHx8fDA%3D",
@@ -28,7 +26,6 @@ const certificates = [
   {
     id: 3,
     title: "Advanced Soft Skills Training",
-    issuer: "Internshala",
     category: "Soft Skills",
     image:
       "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dGVhbSUyMHdvcmt8ZW58MHx8MHx8fDA%3D",
@@ -36,17 +33,15 @@ const certificates = [
   },
   {
     id: 4,
-    title: "React Specialist",
-    issuer: "Meta",
+    title: "Admin Dashboard Specialist",
     category: "Frontend",
     image:
       "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cmVhY3QlMjBqc3xlbnwwfHwwfHx8MA%3D%3D",
-    link: "https://example.com/react-cert",
+    link: "https://export-admin-dashboard.vercel.app/",
   },
   {
     id: 5,
     title: "Database Design",
-    issuer: "MongoDB University",
     category: "Backend",
     image:
       "https://images.unsplash.com/photo-1547658719-da2b51169166?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZGF0YWJhc2V8ZW58MHx8MHx8fDA%3D",
@@ -55,11 +50,18 @@ const certificates = [
   {
     id: 6,
     title: "Leadership Masterclass",
-    issuer: "LinkedIn Learning",
     category: "Soft Skills",
     image:
       "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bGVhZGVyc2hpcHxlbnwwfHwwfHx8MA%3D%3D",
     link: "https://example.com/leadership-cert",
+  },
+  {
+    id: 7,
+    title: "Guest House Specialist",
+    category: "Frontend",
+    image:
+      "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cmVhY3QlMjBqc3xlbnwwfHwwfHx8MA%3D%3D",
+    link: "https://guesthouse-web.vercel.app/",
   },
 ];
 
@@ -88,7 +90,7 @@ export default function CertificatesPage() {
             <span className="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-purple-400 to-pink-600 rounded-full"></span>
           </span>
           <span className="ml-3 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
-           Projects
+            Projects
           </span>
         </h1>
         <p className="text-gray-400 dark:text-gray-400 max-w-2xl mx-auto text-lg">
@@ -98,7 +100,7 @@ export default function CertificatesPage() {
       </motion.div>
 
       {/* Tabs */}
-      <Tabs defaultValue="All" className="w-full">
+      <Tabs defaultValue="Frontend" className="w-full">
         <TabsList className="flex flex-wrap justify-center gap-3 mb-12 bg-transparent">
           {categories.map((category) => (
             <motion.div
@@ -152,7 +154,7 @@ export default function CertificatesPage() {
                           {cert.title}
                         </CardTitle>
                         <p className="text-sm text-gray-500 dark:text-gray-400">
-                          Issued by {cert.issuer}
+                          Created by <span className="text-gray-900 font-bold">Aman</span>
                         </p>
                       </CardHeader>
                       <CardContent>
