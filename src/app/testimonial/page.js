@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 
 const testimonials = [
   {
@@ -209,7 +210,7 @@ const TestimonialSlider = () => {
                       className="relative flex-shrink-0"
                     >
                       <div className={`absolute inset-0 ${testimonials[activeIndex].highlight} rounded-full blur-xl opacity-40`} />
-                      <img 
+                      <Image height={500} width={500}
                         src={testimonials[activeIndex].avatar} 
                         alt={testimonials[activeIndex].name}
                         className="w-32 h-32 rounded-full object-cover border-4 border-white/20 relative z-10"
@@ -233,9 +234,9 @@ const TestimonialSlider = () => {
                         transition={{ delay: 0.4 }}
                         className="text-lg italic text-gray-200 mb-6 relative"
                       >
-                        <span className="absolute -top-6 -left-2 text-5xl text-white/10">"</span>
+                        <span className="absolute -top-6 -left-2 text-5xl text-white/10">&ldquo;</span>
                         {testimonials[activeIndex].content}
-                        <span className="absolute -bottom-6 -right-2 text-5xl text-white/10">"</span>
+                        <span className="absolute -bottom-6 -right-2 text-5xl text-white/10">&rdquo;</span>
                       </motion.blockquote>
                       
                       <motion.div
