@@ -53,7 +53,7 @@ export default function Navbar() {
     },
     {
       id: "certificate",
-      label: "Certifications",
+      label: "Projects",
       dropdown: true,
       items: [
         { id: "aws", label: "AWS Certified" },
@@ -62,9 +62,9 @@ export default function Navbar() {
       ],
     },
     {
-      id: "blogpost",
-      label: "Portfolio",
-      dropdown: true,
+      id: "testimonials",
+      label: "Testimonials",
+      dropdown: false,
       items: [
         { id: "web", label: "Web Projects" },
         { id: "mobile", label: "Mobile Apps" },

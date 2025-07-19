@@ -154,7 +154,7 @@ export default function Contact() {
         },
       }} />
       
-      <div className="bg-gray-900 rounded py-15 relative z-10 mx-auto flex h-full max-w-full flex-col space-y-10 sm:flex-row sm:items-center sm:justify-between sm:space-y-0 sm:space-x-10">
+      <div className="rounded py-15 relative z-10 mx-auto flex h-full max-w-full flex-col space-y-10 sm:flex-row sm:items-center sm:justify-between sm:space-y-0 sm:space-x-10">
         {/* Contact Details - Enhanced */}
         <motion.div 
           className="flex flex-col space-y-6 sm:max-w-1/2 px-10"
@@ -220,9 +220,9 @@ export default function Contact() {
                     className="h-6 w-6 object-contain opacity-80"
                   />
                 </motion.div>
-                <div className="border-b border-purple-200/60 py-2 group-hover:border-purple-400/60">
+                <div className="bg-gradient-to-br from-purple-600 to-amber-500 px-5 rounded border-b border-purple-200/60 py-2 group-hover:border-purple-400/60">
                   <p className="text-sm font-medium text-white sm:text-base">{item.label}</p>
-                  <p className="text-lg font-semibold text-white sm:text-xl">{item.value}</p>
+                  <p className="text-lg font-semibold text-gray-900 sm:text-xl">{item.value}</p>
                 </div>
               </motion.div>
             ))}
@@ -307,7 +307,7 @@ export default function Contact() {
               <motion.button
                 type="submit"
                 disabled={loading}
-                className="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-br from-purple-600 to-amber-500 p-3.5 font-semibold text-white shadow-lg transition-all duration-300 hover:shadow-xl hover:shadow-purple-200 sm:p-4"
+                className="flex w-full items-center justify-center gap-2 rounded bg-gradient-to-br from-purple-600 to-amber-500 p-3.5 font-semibold text-white shadow-lg transition-all duration-300 hover:shadow-xl hover:shadow-purple-200 sm:p-4"
                 whileHover={!loading ? buttonHover : {}}
                 whileTap={!loading ? buttonTap : {}}
               >

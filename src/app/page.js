@@ -10,6 +10,7 @@ import Contact from './contact/page';
 import Footer from './footer/page';
 import Navbar from '@/app/navbar/page';
 import ReviewPopup from '@/app/reviewpopup/page';
+import TestimonialSlider from './testimonial/page';
 
 export default function Home() {
   const [showPopup, setShowPopup] = useState(false);
@@ -40,7 +41,7 @@ export default function Home() {
       <About />
       <Skills />
       <Certifications />
-      <Projects />
+      <TestimonialSlider />
       <Contact />
       <Footer />
       {showPopup && <ReviewPopup onClose={handleClosePopup} />}
